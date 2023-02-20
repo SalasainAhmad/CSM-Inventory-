@@ -27,7 +27,7 @@
     color: #e95c15;
     text-decoration: none;
 }
-h6, span ,th , td{
+h6 ,th , td{
     font-family: 'Roboto', sans-serif;
     color: black;
 }
@@ -168,55 +168,62 @@ h6, span ,th , td{
                         <table class="table table-bordered table-sm table-striped dataTable no-footer" style="font-size:13px" id="mytable" aria-describedby="mytable_info">
                     <thead>
                       <tr>
+                        <th scope="col" class="sorting" tabindex="0" aria-controls="mytable" rowspan="1" colspan="1" aria-label="No: activate to sort column ascending" 
+                        style="width: 70px;font-family: 'Evogria', sans-serif;">Number</th>
+                        <th scope="col" class="sorting" tabindex="0" aria-controls="mytable" rowspan="1" colspan="1" aria-label="ControlledChem Name: activate to sort column ascending" 
+                        style="font-family: 'Evogria', sans-serif;">Controlled Chemical Name</th>
+                        <th scope="col" class="sorting" tabindex="0" aria-controls="mytable" rowspan="1" colspan="1" aria-label="Volume: activate to sort column ascending" 
+                        style="width: 140px;font-family: 'Evogria', sans-serif;">Volume / Mass</th>
+                        <th scope="col" class="sorting" tabindex="0" aria-controls="mytable" rowspan="1" colspan="1" aria-label="Stocks: activate to sort column ascending" 
+                        style="width: 70px;font-family: 'Evogria', sans-serif;">Stocks</th>
+                        <th scope="col" class="sorting" tabindex="0" aria-controls="mytable" rowspan="1" colspan="1" aria-label="Date: activate to sort column ascending" 
+                        style="width: 150px;font-family: 'Evogria', sans-serif;">Date Added</th>
+                        <th scope="col" class="sorting" tabindex="0" aria-controls="mytable" rowspan="1" colspan="1" aria-label="Expire: activate to sort column ascending" 
+                        style="width: 150px;font-family: 'Evogria', sans-serif;">Expiration</th>
                         <th scope="col" class="sorting sorting_asc" tabindex="0" aria-controls="mytable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Action: activate to sort column descending" 
                         style="width: 20.425px;font-family: 'Evogria', sans-serif;">Modify</th>
-                        <th scope="col" class="sorting" tabindex="0" aria-controls="mytable" rowspan="1" colspan="1" aria-label="No: activate to sort column ascending" 
-                        style="width: 21.2125px;font-family: 'Evogria', sans-serif;">Number</th>
-                        <th scope="col" class="sorting" tabindex="0" aria-controls="mytable" rowspan="1" colspan="1" aria-label="ControlledChem Name: activate to sort column ascending" 
-                        style="width: 220.45px;font-family: 'Evogria', sans-serif;">Controlled Chemical Name</th>
-                        <th scope="col" class="sorting" tabindex="0" aria-controls="mytable" rowspan="1" colspan="1" aria-label="Volume: activate to sort column ascending" 
-                        style="width: 34px;font-family: 'Evogria', sans-serif;">Volume / Mass</th>
-                        <th scope="col" class="sorting" tabindex="0" aria-controls="mytable" rowspan="1" colspan="1" aria-label="Stocks: activate to sort column ascending" 
-                        style="width: 43.625px;font-family: 'Evogria', sans-serif;">Stocks</th></tr>
+                     </tr>
                     </thead>
                     <tbody>
                     <tr class="even">
-                        <td class="sorting_1">
-                          <div class="btn-group">
-                            <button class="btn btn-light text-primary" onclick="window.location.href='editcontrolledchem.html' " style="font-size:13px" fdprocessedid="m0dixu"><i class="fas fa-edit"></i></button>
-                  
-                            <button class="btn btn-light text-danger" style="font-size:13px;" fdprocessedid=""><i class="fas fa-trash" data-bs-toggle="modal" data-bs-target="#exampleModal38"></i></button>
-                  
-                        
-                  
-                  
-                  <div class="modal fade" id="exampleModal38" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-sm">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h6 class="modal-title text-danger" id="exampleModalLabel">Confirm Delete</h6>
-                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                     
-                        <h6 style="font-size:14px">Please type "DELETE" to confirm.</h6>
-                       
-                        <input type="text" class="form-control inkey" style="text-transform:uppercase;font-size:14px" data-id="38">
-                  
-                        </div>
-                        <div class="modal-footer">
-                         
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                          
-                          </div>
-                        </td>
                         <td>1</td>
                         <td>Stimulants</td>
                         <td>10 grams</td>
                         <td>100</td>
+                        <td>February 20, 2023</td>
+                        <td>August 20, 2023</td>
+                        <td class="sorting_1">
+                            <div class="btn-group">
+                              <button class="btn btn-light text-primary" onclick="window.location.href='editcontrolledchem.html' " style="font-size:13px" fdprocessedid="m0dixu"><i class="fas fa-edit"></i></button>
+                    
+                              <button class="btn btn-light text-danger" style="font-size:13px;" fdprocessedid=""><i class="fas fa-trash" data-bs-toggle="modal" data-bs-target="#exampleModal38"></i></button>
+                    
+                          
+                    
+                    
+                    <div class="modal fade" id="exampleModal38" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-sm">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h6 class="modal-title text-danger" id="exampleModalLabel">Confirm Delete</h6>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                       
+                          <h6 style="font-size:14px">Please type "DELETE" to confirm.</h6>
+                         
+                          <input type="text" class="form-control inkey" style="text-transform:uppercase;font-size:14px" data-id="38">
+                    
+                          </div>
+                          <div class="modal-footer">
+                           
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                            
+                            </div>
+                          </td>
                       </tr></tbody>
                   </table></div></div>
             
