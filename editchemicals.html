@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Admin Profile - CSM Inventory System</title>
+    <title>Edit Chemicals - CSM Inventory System</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -67,8 +67,8 @@ h6, span ,th , td{
             
                 <div class="navbar-nav w-100">
                     <a style="font-family: 'Evogria', sans-serif;"href="apparatus.html" class="nav-item nav-link"><i class="fas fa-bong"></i>Apparatus</a>
-                    <a style="font-family: 'Evogria', sans-serif;" href="chemicals.html" class="nav-item nav-link"><i class="fas fa-wine-bottle"></i>Chemicals</a>
-                    <a style="font-family: 'Evogria', sans-serif;" href="ctrlchem.html" class="nav-item nav-link active"><i class="fas fa-vials"></i>Controlled Chem</a>
+                    <a style="font-family: 'Evogria', sans-serif;" href="chemicals.html" class="nav-item nav-link  active"><i class="fas fa-wine-bottle"></i>Chemicals</a>
+                    <a style="font-family: 'Evogria', sans-serif;" href="ctrlchem.html" class="nav-item nav-link"><i class="fas fa-vials"></i>Controlled Chem</a>
                     <a style="font-family: 'Evogria', sans-serif;" href="equipment.html" class="nav-item nav-link"><i class="fas fa-cog"></i>Equipment</a>
                     <a style="font-family: 'Evogria', sans-serif;" href="borrowing.html" class="nav-item nav-link"><i class="fas fa-hands"></i>Borrowing</a>
                     <a style="font-family: 'Evogria', sans-serif;" href="breakage.html" class="nav-item nav-link"><i class="fas fa-heart-broken"></i>Breakage</a>
@@ -124,10 +124,10 @@ h6, span ,th , td{
 
             <!-- Widgets Start -->
             <form action="#" method="post" enctype="multipart/form-data">
-                <div class="container">
+                <div class="container" style="width: 40%;">
                     <div style="background-color: lightgray;"class="card mt-3 shadow">
                         <div class="card-body">
-                        <h5 class="mb-5"style="font-weight: bolder; font-family: 'Evogria', sans-serif; ">Admin Profile</h5>
+                        <h5 class="mb-5"style="font-weight: bolder; font-family: 'Evogria', sans-serif; ">Edit Chemical</h5>
                       
                             <div class="row">
                               
@@ -135,33 +135,22 @@ h6, span ,th , td{
             
                             <h6 style="font-size:14px">
                            
-                   Username
-                    <input type="text" class="form-control mb-3" style="font-size:13px;" name="name" required>
+                   Chemical Name
+                    <input type="text" class="form-control mb-3" style="font-size:13px; width: 155%;" name="name" required>
             
-                   Email
-                    <input type="text" class="form-control mb-3" style="font-size:13px;" name="email">
+                   Volume / Mass
+                    <input type="number" class="form-control mb-3" style="font-size:13px; width: fit-content;" name="volume">
             
-                   Password
-                   <input type="password" class="form-control mb-3" style="font-size:13px" name="password">
+                   Stocks
+                   <input type="number" class="form-control mb-3" style="font-size:13px; width: fit-content;" name="stocks">
                             </h6>
-            
-                                </div>
-                                <div class="col-md-3">
-            
-                                <h6 style="text-align:center" class="mb-5">
-                                <img src="img/addimage.jpg" alt="" class="img-thumbnail form-control" >
-                                <br>
-                                <input type="file" name="photo" style="font-size:13px" accept="image/*" class="form-control">
-                                </h6>
-            
-            
-            
             
                                 </div>
                             </div>
                            
                           <div class="btn-group" style="float:right; ">
-                         <button type="submit" name="adminprofile" class="btn btn-secondary" style="font-size:14px; font-family: 'Evogria', sans-serif;">Update</button>
+                         <a href="chemicals.html" class="btn btn-light text-danger border-dark" style="font-size:12px;margin:right;">Cancel</a>
+                         <button type="submit" name="addchemical" class="btn btn-secondary" style="font-size:14px; font-family: 'Evogria', sans-serif;">Update</button>
                          </div>
                         </div>
                     </div>
