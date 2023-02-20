@@ -41,19 +41,6 @@
 .table {
     border-color: #000;
 }
-#myList {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-          }
-          
-          #myList li {
-            display: none;
-          }
-          
-          #myList li.show {
-            display: block;
-          }
 </style>
 <body>
     <div class="container-fluid position-relative d-flex p-0">
@@ -279,29 +266,7 @@
 
         </div>
         <!-- Content End -->
-    <!-- JavaScript  -->
-    <script>
-        function filterOptions() {
-          // Get the input value and convert to lowercase
-          var input = document.getElementById("myInput");
-          var filter = input.value.toLowerCase();
-        
-          // Get the list element and all items
-          var list = document.getElementById("myList");
-          var items = list.getElementsByTagName("li");
-        
-          // Loop through all items and show those that match the search query
-          for (var i = 0; i < items.length; i++) {
-            var text = items[i].textContent.toLowerCase();
-            if (text.indexOf(filter) > -1) {
-              items[i].classList.add('show');
-            } else {
-              items[i].classList.remove('show');
-            }
-          }
-        }
-    </script>
-
+   
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
