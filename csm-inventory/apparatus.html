@@ -23,7 +23,9 @@
     font-family: 'Roboto', sans-serif;
     color: black;
 }
-
+td{
+    font-size: 23px;
+}
     a {
     color: #e95c15;
     text-decoration: none;
@@ -42,6 +44,19 @@
 .table {
     border-color: #000;
 }
+#myList {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+          }
+          
+          #myList li {
+            display: none;
+          }
+          
+          #myList li.show {
+            display: block;
+          }
 </style>
 <body>
     <div class="container-fluid position-relative d-flex p-0">
@@ -86,9 +101,7 @@
                 <a href="#" class="sidebar-toggler flex-shrink-0">
                     <img src="img/sidebar.png" alt="" style="width: 40px; height: 40px;">
                 </a>
-                <form stye="{border-color: orange;"class="d-none d-md-flex ms-4">
-                    <input class="form-control border-0" type="search" placeholder="Search">
-                </form>
+
                 <div class="navbar-nav align-items-center ms-auto">
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
@@ -108,7 +121,7 @@
                             <span class="d-none d-lg-inline-flex">Sir Baddy</span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
-                            <a style="font-family: 'Evogria', sans-serif;" href="#" class="dropdown-item"><i class="fas fa-user" style="margin: 10px;">
+                            <a style="font-family: 'Evogria', sans-serif;" href="adminprofile.html" class="dropdown-item"><i class="fas fa-user" style="margin: 10px;">
                             </i>Admin</a>
                             <a style="font-family: 'Evogria', sans-serif;" href="index.html" class="dropdown-item"><i class="fas fa-sign-out-alt" style="margin: 10px;">
                             </i>Logout</a>
@@ -120,130 +133,137 @@
 
 
             <!-- Widgets Start -->
-            <div class="col-sm-12 col-xl-6">
-                <div class="bg-light rounded h-100 p-4">
-                    <h6 class="mb-4" style="font-family: 'Evogria', sans-serif;">Apparatus</h6>
-                    <table class="table table-bordered">
-                        <thead>
-                            <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">Name</th>
-                                <th scope="col">Brand</th>
-                                <th scope="col">Stocks</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Tube 8</td>
-                                <td>Pyrex</td>
-                                <td>69</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>Tube 23</td>
-                                <td>Ordinary</td>
-                                <td>55</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td>Tube 69</td>
-                                <td>Ordinary</td>
-                                <td>78</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">4</th>
-                                <td>Tube 8</td>
-                                <td>Pyrex</td>
-                                <td>69</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>Tube 23</td>
-                                <td>Ordinary</td>
-                                <td>55</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">5</th>
-                                <td>Tube 69</td>
-                                <td>Ordinary</td>
-                                <td>78</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">6</th>
-                                <td>Tube 8</td>
-                                <td>Pyrex</td>
-                                <td>69</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">7</th>
-                                <td>Tube 23</td>
-                                <td>Ordinary</td>
-                                <td>55</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">8</th>
-                                <td>Tube 69</td>
-                                <td>Ordinary</td>
-                                <td>78</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">9</th>
-                                <td>Tube 8</td>
-                                <td>Pyrex</td>
-                                <td>69</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">10</th>
-                                <td>Tube 23</td>
-                                <td>Ordinary</td>
-                                <td>55</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">11</th>
-                                <td>Tube 69</td>
-                                <td>Ordinary</td>
-                                <td>78</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">12</th>
-                                <td>Tube 8</td>
-                                <td>Pyrex</td>
-                                <td>69</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">13</th>
-                                <td>Tube 23</td>
-                                <td>Ordinary</td>
-                                <td>55</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">14</th>
-                                <td>Tube 69</td>
-                                <td>Ordinary</td>
-                                <td>78</td>
-                            </tr>
-                        </tbody>
-                    </table>
+            <div style="background-color: lightgray; padding: 10px;" class="main_contents">
+                <div class="container " >
+                  <br>
+                 <br>
+                 <h5 style="font-weight: bolder; font-family: 'Evogria', sans-serif;">Apparatus</h5>
+                 <!--
+                       <div class="alert alert-success alert-dismissable"  data-bs-dismiss="alert" role="alert" style="font-size:13px">
+                        Chemicals Updated Successfully!
+                       <button type="button" style="float:right" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                       </div>
+                       <div class="alert alert-success alert-dismissable"  data-bs-dismiss="alert" role="alert" style="font-size:13px">
+                        Chemicals Deleted Successfully!
+                       <button type="button" style="float:right" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                       </div>
+                       <div class="alert alert-success alert-dismissable"  data-bs-dismiss="alert" role="alert" style="font-size:13px">
+                        Chemicals Added Successfully!
+                       <button type="button" style="float:right" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                     </div>
+                -->
+                <div>
+                <button onclick="window.location.href='addapparatus.html' " class="btn btn-dark mb-3 mt-4" style="font-size:13px; font-family: 'Evogria', sans-serif;"><i class="fas fa-plus-circle"></i>Add</button>
                 </div>
-            </div>
-
-            <div class="container-fluid pt-4 px-4 ">
-                <div class="row g-4">
-                    <div class="col-sm-12 col-md-6 col-xl-4">
-                        <div class="h-100 bg-light rounded p-4">
-                            <div class="d-flex align-items-center justify-content-between mb-4">
-                                <h6 class="mb-0">Calender</h6>
-                            </div>
-                            <div id="calender"></div>
+                <div class="row mb-3">
+                    <div class="col-sm-12 col-md-6">
+                        <div class="dataTables_length" id="mytable_length">
+                        <label>
+                            <select name="mytable_length" aria-controls="mytable" class="form-select form-select-sm" fdprocessedid="pflky">
+                                <option value="10">10</option>
+                                <option value="25">25</option>
+                                <option value="50">50</option>
+                                <option value="100">100</option>
+                            </select>
+                        </label>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <div id="mytable_filter" class="dataTables_filter">
+                        <label>
+                            <input type="search" class="form-control form-control-sm" placeholder="Search Apparatus" aria-controls="mytable">
+                        </label>
                         </div>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <table class="table table-bordered table-sm table-striped dataTable no-footer" style="font-size:13px" id="mytable" aria-describedby="mytable_info">
+                    <thead>
+                      <tr>
+                        <th scope="col" class="sorting sorting_asc" tabindex="0" aria-controls="mytable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Action: activate to sort column descending" 
+                        style="width: 20.425px;font-family: 'Evogria', sans-serif;">Modify</th>
+                        <th scope="col" class="sorting" tabindex="0" aria-controls="mytable" rowspan="1" colspan="1" aria-label="No: activate to sort column ascending" 
+                        style="width: 21.2125px;font-family: 'Evogria', sans-serif;">Number</th>
+                        <th scope="col" class="sorting" tabindex="0" aria-controls="mytable" rowspan="1" colspan="1" aria-label="Apparatus Name: activate to sort column ascending" 
+                        style="width: 220.45px;font-family: 'Evogria', sans-serif;">Apparatus Name</th>
+                        <th scope="col" class="sorting" tabindex="0" aria-controls="mytable" rowspan="1" colspan="1" aria-label="Brand: activate to sort column ascending" 
+                        style="width: 34px;font-family: 'Evogria', sans-serif;">Brand</th>
+                        <th scope="col" class="sorting" tabindex="0" aria-controls="mytable" rowspan="1" colspan="1" aria-label="Stocks: activate to sort column ascending" 
+                        style="width: 43.625px;font-family: 'Evogria', sans-serif;">Stocks</th></tr>
+                    </thead>
+                    <tbody>
+                    <tr class="even">
+                        <td class="sorting_1">
+                          <div class="btn-group">
+                            <button class="btn btn-light text-primary" onclick="window.location.href='editapparatus.html' " style="font-size:13px" fdprocessedid="m0dixu"><i class="fas fa-edit"></i></button>
+                  
+                            <button class="btn btn-light text-danger" style="font-size:13px;" fdprocessedid=""><i class="fas fa-trash" data-bs-toggle="modal" data-bs-target="#exampleModal38"></i></button>
+                  
+                        
+                  
+                  
+                  <div class="modal fade" id="exampleModal38" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-sm">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h6 class="modal-title text-danger" id="exampleModalLabel">Confirm Delete</h6>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                     
+                        <h6 style="font-size:14px">Please type "DELETE" to confirm.</h6>
+                       
+                        <input type="text" class="form-control inkey" style="text-transform:uppercase;font-size:14px" data-id="38">
+                  
+                        </div>
+                        <div class="modal-footer">
+                         
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                          
+                          </div>
+                        </td>
+                        <td>1</td>
+                        <td>Tube 8</td>
+                        <td>Pyrex</td>
+                        <td>100</td>
+                      </tr></tbody>
+                  </table></div></div>
+            
+            
+            
+               
+               </div> 
             </div>
             <!-- Widgets End -->
 
         </div>
         <!-- Content End -->
+    <!-- JavaScript  -->
+    <script>
+        function filterOptions() {
+          // Get the input value and convert to lowercase
+          var input = document.getElementById("myInput");
+          var filter = input.value.toLowerCase();
+        
+          // Get the list element and all items
+          var list = document.getElementById("myList");
+          var items = list.getElementsByTagName("li");
+        
+          // Loop through all items and show those that match the search query
+          for (var i = 0; i < items.length; i++) {
+            var text = items[i].textContent.toLowerCase();
+            if (text.indexOf(filter) > -1) {
+              items[i].classList.add('show');
+            } else {
+              items[i].classList.remove('show');
+            }
+          }
+        }
+    </script>
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>

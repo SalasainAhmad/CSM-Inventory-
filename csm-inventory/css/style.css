@@ -180,13 +180,9 @@ input[type = search] {
 
 .content .navbar .sidebar-toggler,
 .content .navbar .navbar-nav .nav-link i {
-    width: 40px;
-    height: 40px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background: #FFFFFF;
-    
 }
 
 .content .navbar .dropdown-toggle::after {
@@ -236,5 +232,19 @@ input[type = search] {
 .bootstrap-datetimepicker-widget table td.today::before {
     border-bottom-color: gray;
 }
-
-
+/*** Edit Add ***/
+.btn-secondary {
+    color: #fff;
+    background-color: #191C24;
+    border-color: #6c757d;
+}
+.btn-group .btn-secondary:hover,
+.btn-group .btn-secondary.active {
+    background-color: #e95c15;
+}
+.btn-dark:hover,
+.btn-dark.active  {
+    color: #fff;
+    background-color: #e95c15;
+    border-color: #191C24;
+}
