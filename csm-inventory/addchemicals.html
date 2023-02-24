@@ -22,30 +22,6 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 
-<style>
-    a {
-    color: #e95c15;
-    text-decoration: none;
-}
-h6, span ,th , td{
-    font-family: 'Roboto', sans-serif;
-    color: black;
-}
-.text-primary {
-     color: #e95c15 !important; 
-}
-.btn-primary {
-    color: #000;
-    background-color:#e95c15;
-    border-color: #e95c15;
-}
-.bg-light {
-    background-color: lightgray !important; 
-}
-.table {
-    border-color: #000;
-}
-</style>
 <body>
     <div class="container-fluid position-relative d-flex p-0">
         <!-- Spinner Start -->
@@ -121,7 +97,7 @@ h6, span ,th , td{
 
             <!-- Widgets Start -->
             <form action="#" method="post" enctype="multipart/form-data">
-                <div class="container" style="width: 40%;">
+                <div class="container" style="width: 410px;">
                     <div style="background-color: lightgray;"class="card mt-3 shadow">
                         <div class="card-body">
                         <h5 class="mb-5"style="font-weight: bolder; font-family: 'Evogria', sans-serif; ">Add Chemical</h5>
@@ -133,13 +109,16 @@ h6, span ,th , td{
                             <h6 style="font-size:14px">
                            
                    Chemical Name
-                    <input type="text" class="form-control mb-3" style="font-size:13px; width: 155%;" name="name" required>
+                    <input type="text" class="form-control mb-3" style="font-size:13px; width: 355px;" name="name" required>
             
                    Volume / Mass
                     <input type="number" class="form-control mb-3" style="font-size:13px; width: fit-content;" name="volume">
             
                    Stocks
                    <input type="number" class="form-control mb-3" style="font-size:13px; width: fit-content;" name="stocks">
+                   Date:
+                   <input type="date" id="start" value="2023-02-24"min="2023-01-01" max="2040-12-31"
+                   class="form-control mb-3" style="font-size:13px; width: fit-content;"name="date">
                             </h6>
             
                                 </div>
@@ -147,7 +126,7 @@ h6, span ,th , td{
                            
                           <div class="btn-group" style="float:right; ">
                          <a href="chemicals.html" class="btn btn-light text-danger border-dark" style="font-size:12px;margin:right;">Cancel</a>
-                         <button type="submit" name="addchemical" class="btn btn-secondary" style="font-size:14px; font-family: 'Evogria', sans-serif;">Add</button>
+                         <button type="submit" name="addchemical" class="btn btn-secondary" style="font-size:14px; font-family: 'Evogria', sans-serif;"><i class="fas fa-plus-circle"></i>Add</button>
                          </div>
                         </div>
                     </div>
